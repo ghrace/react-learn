@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
-
+import {connect} from 'react-redux'
+const list=[1,3,4]
 
 class Counter extends Component{
     constructor(props){
@@ -10,7 +11,16 @@ class Counter extends Component{
     }
     render(){
         return (
-            <p>{this.state.count}</p>
+            <div>
+                <p>{this.state.count}</p>
+                <ul>
+                    {
+                        list.map((item)=>{
+                            return <li key={item}>{item}</li>
+                        })
+                    }
+                </ul>
+            </div>
         )
     }
 }

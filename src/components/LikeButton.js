@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import { findDOMNode } from 'react-dom';
 class LikeButton extends Component {
     constructor(props){
         super(props);
@@ -13,7 +14,7 @@ class LikeButton extends Component {
         const text=this.state.liked?'like':'havent\'t liked';
         return (
             <p onClick={this.handleClick.bind(this,'extra param')}>
-            you {text} this.click to toggle</p>
+            you {text} this.   click to toggle</p>
         )
     }
     componentWillMount(){
@@ -21,7 +22,11 @@ class LikeButton extends Component {
         //可以在这个方法里面调用 setState 改变状态，并且不会导致额外调用一次 render
     }
     componentDidMount(){
+        //不能用在无状态组件上。
         //开始可以通过 ReactDOM.findDOMNode(this) 获取到组件的 DOM 节点。
+        const el=findDOMNode(this);
+        console.log(el);
+
     }
     //方法不会在首次 render 组件的周期调用
     componentWillReceiveProps(){
