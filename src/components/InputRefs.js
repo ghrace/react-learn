@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 class InputRefs extends Component {
     constructor() {
-        super()
+      super()
       this.state={
           userInput:''
       }

@@ -1,18 +1,19 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
-const list=[1,3,4]
+import {increment,decrement,reset} from '../store/action'
 
-class Counter extends Component{
+class Counters extends Component{
     constructor(props){
         super(props);
-        this.state={
-            count:props.initialCount
-        }
+        console.log(props);
     }
     render(){
+        const {count,add,del,reset}=this.props;
+        const list=[1,3,4]
+
         return (
             <div>
-                <p>{this.state.count}</p>
+                <p>count: { count }</p>
                 <ul>
                     {
                         list.map((item)=>{
@@ -20,9 +21,25 @@ class Counter extends Component{
                         })
                     }
                 </ul>
+                <button onClick={reset}>reset</button>
+                <br/>
+                <button onClick={add}>increment</button>
+                <button onClick={del}>decrement</button>
             </div>
         )
     }
 }
+function mapStateToProps(state) {
+    return {
+        count: state.count
+    };
+}
 
-export default Counter
+function mapDispatchToprops(dispatch) {
+    return {
+        add: () => dispatch(increment()),
+        del: () => dispatch(decrement()),
+        reset:() => dispatch(reset())
+    };
+}
+export default connect(mapStateToProps,mapDispatchToprops)(Counters)
