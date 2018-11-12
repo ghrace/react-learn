@@ -30,7 +30,7 @@ class App extends Component {
     );
   }
 }
-App.PropTypes={
+App.propTypes ={
   name:PropTypes.string
 }
 export default App;

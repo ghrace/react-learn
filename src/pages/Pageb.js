@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import TempratureInput from '../components/TempratureInput'
 export default class Pageb extends Component{
     constructor(){
         super()
         this.name='pageb'
     }
     render(){
-        return(<h1>page2</h1>)
+        return(
+            <div>
+                <TempratureInput scale='c'/>
+                <TempratureInput scale='f'/>
+            </div>
+        )
     }
 }
