@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import PropTypes from 'prop-types';
-import LikeButton from '../components/LikeButton'
-import Counter from '../components/Counter'
-import InputRefs from '../components/InputRefs'
+import LikeButton from '../components/likeButton'
+import Counter from '../components/counter'
+import InputRefs from '../components/inputRefs'
 // import Hook from './components/Hook'
 import { Link} from 'react-router-dom'
 import './App.css';
@@ -19,6 +19,9 @@ class App extends Component {
             </li>
             <li>
               <Link to="/Pageb">Pageb</Link>
+            </li>
+            <li>
+              <Link to="/game">game</Link>
             </li>
           </ul>
           <LikeButton/>

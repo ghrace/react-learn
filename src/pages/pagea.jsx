@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BoilingVerdict} from '../components/Boiling'
+import {BoilingVerdict} from '../components/boiling.jsx'
 export default class Pagea extends Component{
     constructor(props){
         super(props)
