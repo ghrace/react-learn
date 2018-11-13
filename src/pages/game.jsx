@@ -41,7 +41,8 @@ export default class Game extends Component {
         stepNumber: step,
         xIsNext: step % 2 === 0 //偶数步
       });
-    } else {//重新开始,清空历史
+    } else {
+      //重新开始,清空历史
       this.setState({
         stepNumber: step,
         xIsNext: step % 2 === 0, //偶数步
@@ -67,10 +68,12 @@ export default class Game extends Component {
         </li>
       );
     });
-
+    let peace = current.squares.every(i => i !== null);
     let status;
     if (winner) {
       status = "赢家: " + winner;
+    } else if (peace) {
+      status = "和局";
     } else {
       status = "下个玩家: " + (this.state.xIsNext ? "X" : "O");
     }
