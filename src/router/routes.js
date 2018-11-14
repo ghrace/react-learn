@@ -4,6 +4,7 @@ import Pagea from '../pages/pagea'
 import Pageb from '../pages/pageb'
 import App from '../pages/app'
 import Game from '../pages/game'
+import Todo from '../pages/todo'
 
 export default class RouteConfig extends Component {
     render(){
@@ -14,6 +15,7 @@ export default class RouteConfig extends Component {
                     <Route path='/Pagea' exact component={Pagea}/>
                     <Route path='/Pageb' exact component={Pageb}/>
                     <Route path='/game' exact component={Game}/>
+                    <Route path='/todo' exact component={Todo}/>
                     <Redirect to="/" />
                 </Switch>
             </HashRouter>
