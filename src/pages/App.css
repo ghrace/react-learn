@@ -36,3 +36,10 @@ a{
 li{
   list-style: none;
 }
+
+.links{
+  display: flex;
+}
+.links li{
+  padding-right: 10px;
+}

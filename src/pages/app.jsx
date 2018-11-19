@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <ul>
+        <ul className='links'>
             <li>
               <Link to="/Pagea">Pagea</Link>
             </li>
