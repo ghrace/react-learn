@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import logo from './logo.svg';
-import PropTypes from 'prop-types';
-import LikeButton from '../components/likeButton'
-import Counter from '../components/counter'
-import InputRefs from '../components/inputRefs'
+import PropTypes from "prop-types";
+import LikeButton from "../components/likeButton";
+import Counter from "../components/counter";
+import InputRefs from "../components/inputRefs";
 // import Hook from './components/Hook'
-import { Link} from 'react-router-dom'
-import './App.css';
+import { Link } from "react-router-dom";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-        <ul className='links'>
+          <ul className="links">
             <li>
               <Link to="/Pagea">Pagea</Link>
             </li>
@@ -27,16 +27,16 @@ class App extends Component {
               <Link to="/todo">todo</Link>
             </li>
           </ul>
-          <LikeButton/>
-          <Counter/>
-          <InputRefs/>
+          <LikeButton />
+          <Counter />
+          <InputRefs />
           {/* <Hook/> */}
         </header>
       </div>
     );
   }
 }
-App.propTypes ={
-  name:PropTypes.string
-}
+App.propTypes = {
+  name: PropTypes.string
+};
 export default App;
