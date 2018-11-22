@@ -26,6 +26,9 @@ class App extends Component {
             <li>
               <Link to="/todo">todo</Link>
             </li>
+            <li>
+              <Link to="/down">down</Link>
+            </li>
           </ul>
           <LikeButton />
           <Counter />
